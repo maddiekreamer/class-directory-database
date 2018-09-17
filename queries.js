@@ -7,6 +7,11 @@ create = (newClassmate) => database('class_table').insert(newClassmate).returnin
 
 deleteClassmate = (id) => database('class_table').where('id', id).del().returning('*')
 
+updateStudentById = (student, id) => database('class_table').update(student).where('id', id).returning('*')
+
 module.exports = {
-    listAll
+    listAll,
+    create,
+    deleteClassmate,
+    updateStudentById
 }

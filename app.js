@@ -1,7 +1,7 @@
 const express = require("express")
 const queries = require('./queries')
 const cors = require("cors")
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -25,6 +25,10 @@ app.delete("/:id", (request, response, next) => {
     queries.deleteClassmate(request.params.id).then(result => response.json({
         result
     }))
+})
+
+app.put('/', (request, response, next) => {
+    
 })
 
 app.listen(port, () => {
