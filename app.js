@@ -1,10 +1,13 @@
 const express = require("express")
 const queries = require('./queries')
 const cors = require("cors")
+var bodyParser = require('body-parser')
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors())
+
+app.use(bodyParser.json())
 
 app.get("/", (request, response, next) => {
     queries.listAll().then(result => response.json({
