@@ -99,7 +99,7 @@ exports.seed = function (knex, Promise) {
           last: "Schultz",
           lat: "21.278492",
           long: "-157.832754",
-          favAnimal: "https://upload.wikimedia.org/wikipedia/commons/6/63/African_elephant_warning_raised_trunk.jpg (Not automatically expanded because 4 MB is too large. You can expand it anyway or open it in a new window.) "
+          favAnimal: "https://upload.wikimedia.org/wikipedia/commons/6/63/African_elephant_warning_raised_trunk.jpg"
         }
       ]);
     });
