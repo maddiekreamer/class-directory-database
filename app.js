@@ -9,6 +9,18 @@ app.get("/", (request, response, next) => {
     }))
 });
 
+app.post("/", (request, response, next) => {
+    queries.create(request.body).then(result => response.json({
+        result
+    }))
+})
+
+app.delete("/:id", (request, response, next) => {
+    queries.deleteClassmate(request.params.id).then(result => response.json({
+        result
+    }))
+})
+
 app.listen(port, () => {
     console.log(`listening on ${port}`)
 })
